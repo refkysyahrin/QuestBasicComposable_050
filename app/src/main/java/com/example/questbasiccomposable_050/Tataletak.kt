@@ -10,6 +10,7 @@ import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
@@ -94,11 +95,19 @@ fun TataletakBoxColumnRow(modifier: Modifier) {
     val gambar = painterResource(id = R.drawable.notasibalok)
     Column {
         Box(
-            modifier = modifier.fillMaxWidth().height(height = 110.dp).background(color = Color.Yellow),
-            contentAligment = Aligment.Center
+            modifier = modifier.fillMaxWidth()
+                .height(height = 110.dp)
+                .background(color = Color.Yellow),
+            contentAligment = Alignment.Center
         ) {
             Column() {
-                modifier = modifier.fil
+                Row(
+                modifier = modifier.fillMaxWidth(),
+                 horizontalArrngement = Arrangement.SpaceEvenly
+                ) {
+                Text(text = "Coll_ROw1_Komponen1")
+                Text(text = "Coll_ROw1_Komponen2")
+                Text(text = "Coll_ROw1_Komponen3")
             }
         }
 
