@@ -16,12 +16,10 @@ import com.example.questbasiccomposable_050.ui.theme.QuestBasicComposable_050The
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        enableEdgeToEdge()
         setContent {
             QuestBasicComposable_050Theme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    Greeting(
-                        name = "Android",
+                    TataletakBox(
                         modifier = Modifier.padding(innerPadding)
                     )
                 }
