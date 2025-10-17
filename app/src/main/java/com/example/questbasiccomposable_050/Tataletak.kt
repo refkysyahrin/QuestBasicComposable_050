@@ -1,5 +1,6 @@
 package com.example.questbasiccomposable_050
 
+import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
@@ -14,7 +15,10 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.text.font.FontFamily
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 
 
@@ -103,12 +107,12 @@ fun TataletakBoxColumnRow(modifier: Modifier) {
         ) {
             Column() {
                 Row(
-                modifier = modifier.fillMaxWidth(),
-                 horizontalArrngement = Arrangement.SpaceEvenly
+                    modifier = modifier.fillMaxWidth(),
+                    horizontalArrngement = Arrangement.SpaceEvenly
                 ) {
-                Text(text = "Coll_ROw1_Komponen1")
-                Text(text = "Coll_ROw1_Komponen2")
-                Text(text = "Coll_ROw1_Komponen3")
+                    Text(text = "Coll_ROw1_Komponen1")
+                    Text(text = "Coll_ROw1_Komponen2")
+                    Text(text = "Coll_ROw1_Komponen3")
                 }
                 Row(
                     modifier = modifier.fillMaxWidth(),
@@ -118,8 +122,8 @@ fun TataletakBoxColumnRow(modifier: Modifier) {
                     Text(text = "Coll1_Row2_Komponen2")
                     Text(text = "Coll1_Row2_Komponen3")
                 }
+            }
         }
-    }
         Spacer(modifier = Modifier.height(height = 10.dp))
         Box(
             modifier = modifier
@@ -127,7 +131,15 @@ fun TataletakBoxColumnRow(modifier: Modifier) {
                 .height(height = 300.dp)
                 .background(color = Color.Cyan),
             contentAlignment = Alignment.Center
-        )
+        ) {
+            Image(
+                painter = gambar,
+                contentDescription = null,
+                contentScale = ContentScale.Fit
+            )
+
+        }
+    }
 }
 
 
